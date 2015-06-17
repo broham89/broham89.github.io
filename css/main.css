@@ -1,0 +1,646 @@
+/* GLOBAL SETTINGS
+   ============================= */
+
+*{
+	box-sizing:border-box; /*includes border and padding width*/
+}
+
+body{
+	font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #555;
+	background-color: #FFF;	
+}
+
+h1, h2, h3, h4, .lead, address, lh, a.show_more, .stay_connected a {
+	font-family: "Teko", Helvetica, Arial, sans-serif;
+	font-weight:400; /* standard Teko weight: regular */
+	text-transform: uppercase;
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	font-family:"Teko", Helvetica, Arial, sans-serif;
+	font-weight:400;
+	font-size:20px;
+	letter-spacing: 0.15em;
+	color: #FFF;
+	text-transform: uppercase;
+	cursor:pointer;
+	line-height: 1;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+/* HEADER SETTINGS
+   ============================= */
+
+header {
+	height: 70px;
+}
+
+.logo {
+	display:inline-block; /*this allows the menu to exist on the same line*/
+	background:url("../img/logo.svg") no-repeat;
+	width: 70px;
+	height: 70px;
+}
+
+header nav {
+	display: inline-block;
+	float:right;
+}
+
+header nav ul li {
+	display: inline-block;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+header nav ul li:nth-child(6) {
+	margin-right:0;
+}
+
+header nav ul li a {
+	display:inline-block;
+	padding: 25px 0;
+	color: #000;
+	opacity: .5;
+	border-bottom: 4px solid transparent;
+}
+
+header nav ul li a:hover {
+	color: #f63c3c;
+	opacity: 1;
+	border-bottom: 4px solid #f63c3c;
+}
+
+
+
+/* INTRODUCTION SETTINGS
+   ============================= */
+
+main header {
+	position: relative;
+	background-color: #555;
+	background:url("../img/background.jpg") center center no-repeat fixed;
+	height: 100vh; /*hero image should be 100% of viewport*/
+	min-height:620px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center; /* center all elements */
+	font-family: "Teko", Helvetica, Arial, sans-serif;
+}
+
+main header .title {
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-o--transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+}
+
+main header h1 {
+	font-weight: 300; /*Teko Light*/
+	font-size: 120px;
+	letter-spacing:0.15em;
+	line-height: 1.1;
+	color: #FFF;
+	margin-bottom:55px;
+}
+
+main header button {
+	display:inline-block;
+	background-color: transparent;
+	border: 2px solid rgba(255,255,255,.2);
+	padding: 10px 20px;
+	cursor:pointer;
+	transition: background-color 1s, border 1s; /*transition*/
+}
+
+main header button:hover {
+	display:inline-block;
+	background-color: #f63c3c;
+	border: 2px solid transparent;
+	padding: 10px 20px;
+}
+
+main header button:before {
+	content:'\f04b';
+	font-size: 20px;
+	font-family: "FontAwesome";
+	margin-right:6px;
+}
+
+main header .discover {
+	position:absolute;
+	left:50%;
+	bottom:5%;
+	-webkit-transform:translate(-50%,0);
+	-moz-transform:translate(-50%,0);
+	-o-transform:translate(-50%,0);
+	transform:translate(-50%,0);
+}
+
+main header .discover .mouse {
+	display:block;
+	margin: 20px auto; /*center*/
+	width:24px;
+	height:34px;
+	background-size: cover;
+	background-image:url('../img/mouse.svg');
+}
+
+main header .discover a {
+	display:block;
+	font-size: 18px;
+	color:#FFF;
+	opacity:.7;
+	letter-spacing: 0.15em;
+	transition: opacity 1s; /*transition*/
+}
+
+main header .discover a:hover {
+	opacity: 1;
+}
+
+
+/* ABOUT US SETTINGS
+   ============================= */
+
+.about_us {
+	text-align: center;
+}
+
+h2 {
+	font-size:40px;
+	letter-spacing: 0.12em;
+	color:#000;
+}
+
+.about_us h2 {
+	margin:60px auto 30px;
+	max-width: 900px;
+}
+
+.about_us button {
+	background-color:#f63c3c;
+	padding: 18px 50px;
+	border: none;
+	margin-bottom: 60px;
+}
+
+/* PROJECTS SETTINGS
+   ============================= */
+
+/* Positioning Styles */
+
+.projects {
+	height:100%;
+}
+
+.projects article.project_featured {
+	position: relative;
+	float:left;
+	width: 50%;
+	height: 100vh;
+}
+
+.projects article.project_1 {
+	float:left;
+	width: 50%;
+	height: 50vh;
+	position: relative; /* I'm going to absolutely position child content */
+}
+
+.projects article.project_2 {
+	float:left;
+	width: 50%;
+	height: 50vh;
+	position: relative; /* I'm going to absolutely position child content */
+}
+
+.projects article .project_text {
+	position:absolute;
+	left: 10%;
+	bottom: 10%;
+	width: 50%;
+}
+
+.projects article.project_featured .project_text {
+	position:absolute;
+	left: 10%;
+	bottom: 20%;
+	width: 50%;
+}
+
+.projects article.project_featured ul {
+	height: 100%; /* make the ul 100% of the parent (.project_featured) */
+}
+
+.projects article.project_featured ul li {
+	display:none;
+	height: 100%; /* make the li 100% of the parent (ul) */
+	position: relative; /* I'm going to absolutely position child content */
+}
+
+.projects article.project_featured ul li.active {
+	display:block;
+}
+
+/* Background Images */
+
+.projects article ul li, .projects article {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.projects article.project_featured ul li:nth-child(1) {
+	/* Featured Project #1 */
+	background-image:url('../img/project_featured_large.jpg');
+}
+
+.projects article.project_featured ul li:nth-child(2) {
+	/* Featured Project #2 */
+	/* background-image:url('../img/project_featured2_large.jpg') */;
+}
+
+.projects article.project_1 {
+	background-image:url('../img/project1_large.jpg');
+}
+
+.projects article.project_2 {
+	background-image:url('../img/project2_large.jpg');
+}
+
+/* Text Styles */
+
+.projects article {
+	color: #FFF;
+}
+
+.projects article.project_featured ul li span {
+	display: inline-block;
+	font-family: "Teko", Helvetica, Arial, sans-serif;
+	font-weight:400;
+	font-size: 30px;
+	letter-spacing: 0.10em;
+	text-transform: uppercase;
+	opacity: .3;
+	margin-bottom: 30px;
+}
+
+.projects article h3 {
+	font-size: 60px;
+	letter-spacing: 0.15em;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.projects article p {
+	font-weight: 300;
+	font-size: 18px;
+	opacity: .7;
+	line-height: 24px;
+}
+
+/* Carousel Styles */
+
+.projects article.project_featured nav.carousel {
+	position: absolute;
+	bottom: 5%;
+	left: 10%;
+}
+
+.projects article.project_featured nav.carousel ul li {
+	margin: 0 10px 0 0;
+	display: inline-block;
+	background-image:none;
+	width: 40px;
+	height: 4px;
+	background-color: #FFF;
+	opacity:.2;
+}
+
+.projects article.project_featured nav.carousel ul li.active {
+	opacity: 1;
+}
+
+/* Show More Styles */
+
+a.show_more {
+	display:block;
+	text-align:center;
+	background-color:#30282a;
+	color:#FFF;
+	font-size: 20px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+a.show_more span {
+	display:inline-block;
+	margin:30px auto;
+	padding-bottom:5px;
+	border-bottom:4px solid #FFF;
+}
+
+/* SERVICES SETTINGS
+   ============================= */
+
+.services {
+}
+
+.services ul {
+	display: block;
+}
+
+.services ul li {
+	display: inline-block;
+	float:left;
+	width: 50%;
+	margin-bottom: 60px;
+}
+
+.services ul li h4 {
+	font-size: 30px;
+	font-weight: 400;
+	color: #000;
+	letter-spacing: 0.12em;
+	line-height: 30px;
+	margin-bottom: 5px;
+	width: 60%;
+}
+
+.services ul li .icon {
+	height: 50px;
+	width: 50px;
+	background-size: contain;
+	background-position: top left;
+	background-repeat: no-repeat;
+	margin:60px 0 20px;
+}
+
+.services ul li:nth-child(1) .icon {
+	background-image: url('../img/services1-icon.svg');
+
+}
+
+.services ul li:nth-child(2) .icon {
+	background-image: url('../img/services2-icon.svg');
+
+}
+
+.services ul li p {
+	color: #000;
+	line-height: 22px;
+	width: 90%;
+}
+
+
+/* STAY CONNECTED SETTINGS
+   ============================= */
+
+.stay_connected h2 {
+	margin-bottom:5px;
+}
+
+.stay_connected p {
+	letter-spacing: .01em;
+	line-height: 24px;
+	margin-bottom: 60px;
+}
+
+.stay_connected ul {
+	width:100%; /* fill width of container */
+	position: relative; /* to allow better manipulation of child elements */
+	margin-bottom:50px;
+}
+
+.stay_connected ul a {
+	display:inline-block;
+	float: left;
+	width: 22.75%;
+	min-width: 200px;
+	margin-right:3%;
+	margin-top:10px;
+	margin-bottom:10px;
+	height: 195px;
+	background-color:#30282a;
+}
+
+.stay_connected ul a:nth-child(4) {
+	margin-right:0;
+}
+
+.stay_connected ul a li {
+	text-align:center;
+	color: #FFF;
+	font-weight: 300;
+	font-size: 30px;
+	letter-spacing: 0.12em;
+	padding:60px;
+}
+
+.stay_connected ul a li:before {
+	display:block;
+	font-family:"FontAwesome";
+	font-size: 36px;
+	margin-bottom:20px;
+}
+
+.stay_connected ul a li.behance:before {
+	content:'\f1b4';
+}
+
+.stay_connected ul a li.facebook:before {
+	content:'\f09a';
+}
+
+.stay_connected ul a li.pinterest:before {
+	content:'\f0d2';
+}
+
+.stay_connected ul a li.linkedin:before {
+	content:'\f0e1';
+}
+
+
+/* MAP SETTINGS
+   ============================= */
+
+ .map {
+ 	position: relative; /* to allow vertical positioning of child elements */
+ 	background-color: #555;
+ 	background:url("../img/map-background.jpg") center center no-repeat;
+ 	background-size: cover;
+ 	height:75vh;
+ }
+
+.map address {
+	position: absolute;
+	text-align:center;
+	top:50%;
+	left:50%;
+	width:50%;
+	max-width: 575px;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%); /* This repositions the element relative to its own dimensions */
+	padding:60px;
+	background-color: #f63c3c;
+	color: #FFF;
+}
+
+.map address .icon {
+	display:block;
+	background-image:url("../img/mark.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin:0 auto 20px;
+	width:35px;
+	height:35px;
+}
+
+.map address p {
+	font-size:18px;
+	letter-spacing: .075em;
+	line-height: 16px;
+}
+
+.map address b {
+	display:block;
+	font-size:30px;
+	letter-spacing: .12em;
+	margin-top:20px;
+}
+
+.map address a {
+	color:#FFF;
+}
+
+/* FOOTER 
+   ============================= */
+
+footer a {
+	color: #555;
+}
+
+footer a:hover {
+	color: #f63c3c;
+}
+
+footer nav {
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+footer nav ul {
+	display:inline-block;
+	margin-top:60px;
+	margin-bottom:60px;
+	float:left;
+	font-size:14px;
+	letter-spacing: 0.01em;
+}
+
+footer nav ul:nth-child(1) {
+	width:22.75%;
+	margin-right:3%;
+}
+
+footer nav ul:nth-child(2) {
+	width:48.5%;
+	margin-right:3%;
+}
+
+footer nav ul:nth-child(3) {
+	width:22.75%;
+	margin-right:0;
+}
+
+footer nav lh {
+	display:block;
+	font-weight:300;
+	font-size: 30px;
+	color: #000;
+	letter-spacing: .012em;
+	padding-bottom: 15px;
+	border-bottom: 4px solid #000;
+	margin-bottom: 35px;
+}
+
+footer nav li {
+	display:block;
+	margin-bottom:22px;
+}
+
+footer nav ul:nth-child(2) li {
+	width: 50%;
+	float: left;
+}
+
+footer .subfooter {
+	margin-top:30px;
+	margin-bottom:30px;
+	font-weight:300;
+	font-size: 13px;
+	letter-spacing: .025em;
+}
+
+footer span {
+	display:inline-block;
+	float:left;
+}
+
+footer ul.privacy {
+	display:inline-block;
+	float:right;
+}
+
+footer ul.privacy li {
+	display:inline;
+	margin-left:20px;
+}
+
+
+
+/* OPEN QUESTIONS 
+   ============================= */
+
+/* 1. Do I need to include "container" as part of my CSS selector flow? */
+
+
+
+/* TO-DO 
+   ============================= */
+
+/* 1. Add Browser Compatibility for transform:translate(); */
+/* 2. Standardize Button Width */
+/* 3. Constrain ABOUT US H2 to correct width */
+/* 4. Using header nav ul li:last-child {}, remove the extra spacing to the right of 'Get in Touch' */
+/* 5. Make sure the active nav li has the underline (class=active) - this may be on the A tag actually */
+/* 6. Find a way to get H1 (div .title) - to get back up to 1170. It's constrained right now because of absolute positioning's relationship with the container element */
+/* 7. Go back and, if possible, make any font declarations at the TOP of the CSS (add classes in list form); */
+/* 8. Tweak background-position of .project articles */
+/* 9. Figure out why "Show More Projects" is displaying off center in mobile */
